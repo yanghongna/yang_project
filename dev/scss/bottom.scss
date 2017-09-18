@@ -1,0 +1,305 @@
+@mixin inner {
+    width: 1210px;
+    margin: 0 auto;
+}
+//countries
+.countries {
+    @include inner;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    overflow: hidden;
+    > ul > li {
+        float: left;
+        margin-left: 38px;
+        margin-top: 35px;
+        width: 100px;
+        text-align: center;
+        > a {
+            float: left;
+            .country_pic {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                border-radius: 50%;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .country_hover {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 10;
+                    width: 100px;
+                    height: 100%;
+                    border-radius: 50%;
+                    opacity: 0;
+                }
+            }
+            .country_pic:hover .country_hover {
+                opacity: 1;
+                background-color: rgba(0,0,0,.5);
+            }
+            .country_name {
+                font-size: 14px;
+                height: 14px;
+                line-height: 14px;
+                margin-top: 20px;
+                color: #222222;
+            }
+        }
+    }
+    .nomargin {
+        margin-left: 0;
+    }
+}
+
+//bottom_center
+.bottom_center {
+    width: 100%;
+    min-width: 1210px;
+    background-color: #f1f1ef;
+    .bc_inner {
+        @include inner;
+        height: 130px;
+        padding: 35px 0 20px;
+        > ul > li {
+            float: left;
+            width: 250px;
+            margin-left: 70px;
+            > a {
+                float: left;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                > ins {
+                    display: block;
+                    height: 45px;
+                    margin: 0 auto;
+                    background: url("http://localhost:8080/dev/image/sprite_icons.png") no-repeat;
+                }
+                .ico_name {
+                    display: block;
+                    margin-top: 15px;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #222;
+                }
+                .ico_cont {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #777;
+                }
+                .ico01 {
+                    width: 52px;
+                    background-position: 0 -150px;
+                }
+                .ico02 {
+                    width: 40px;
+                    background-position: -61px -149px;
+                }
+                .ico03 {
+                    width: 44px;
+                    background-position: -119px -150px;
+                }
+                .ico04 {
+                    width: 68px;
+                    background-position: -184px -148px;
+                }
+            }
+        }
+        .nomargin {
+            margin-left: 0;
+        }
+        > ul > li:hover .ico_cont {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+//footer
+.footer {
+    width: 100%;
+    min-width: 1210px;
+    background-color: #474747;
+    .footer_inner {
+        @include inner;
+        padding: 40px 0 20px;
+    }
+}
+.footer_one {
+    .footer_item {
+        float: left;
+        margin-right: 66px;
+        width: 135px;
+        .item_name {
+            font-size: 16px;
+            line-height: 32px;
+            color: #fff;
+        }
+        > li > a {
+            font-size: 13px;
+            line-height: 32px;
+            color: #c5c5c5;
+        }
+        > li:hover > a {
+            text-decoration: underline;
+        }
+    }
+    .footer_code {
+        float: right;
+        > div {
+            float: left;
+            width: 100px;
+            > img {
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: 10px auto 0;
+            }
+            > span {
+                display: block;
+                padding-top: 10px;
+                font-size: 12px;
+                line-height: 20px;
+                text-align: center;
+                color: #c5c5c5;
+            }
+        }
+        .code_weixin {
+            margin-left: 40px;
+        }
+    }
+}
+
+.footer_two{
+    margin-top: 15px;
+    .ft_copy{
+        float: left;
+        >a{
+            display: block;
+            width: 100px;
+            height: 40px;
+            margin-right: 20px;
+            background: url("http://localhost:8080/dev/image/sprite_icons.png") no-repeat -179px -100px;
+        }
+        >span{
+            color: #c5c5c5;
+            display: block;
+            line-height: 12px;
+            margin-top: 16px;
+        }
+    }
+    .ft_right{
+        float: right;
+        width: 866px;
+        .ftr_list{
+            float: right;
+            line-height: 30px;
+            padding-top: 17px;
+            >a{
+                color: #c5c5c5;
+            }
+            >span{
+               padding: 0 15px;
+               color: #6d6d6d;
+            }
+            >a:hover{
+                text-decoration: underline;
+            }
+            .phone{
+                color: #c5c5c5;
+                >ins{
+                    display: inline-block;
+                    background: url("http://localhost:8080/dev/image/sprite_icons.png") no-repeat -103px 0;
+                    width: 12px;
+                    height: 16px;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .ftr_license{
+            position: relative;
+            float: right;
+            line-height: 30px;
+            .ftr_ico{
+                position: absolute;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                top: -32px;
+                left: 0;
+            }
+            .hubeian{
+                position: absolute;
+                top: -30px;
+                left: 30px;
+                >a{
+                    color: #c5c5c5;
+                }
+                >a:hover{
+                    text-decoration: underline;
+                }
+            }
+            .huicp{
+                position: absolute;
+                top: -30px;
+                left: 220px;
+                color: #c5c5c5;
+            }
+            .ftr_font{
+                color: #C5C5C5;
+            }
+            .shuxian{
+                padding: 0 15px;
+                color: #6d6d6d;
+            }
+        }
+    }
+}
+
+.footer_three{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #5a5a5a;
+    >h4{
+        color: #777;
+         float: left;
+        margin-right: 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .ft_links{
+        float: right;
+        color: #777;
+        width: 1140px;
+        >a{
+            color: #777;
+            line-height: 30px;
+        }
+        >span{
+            padding: 0 15px;
+            line-height: 30px;           
+        }
+        >a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
